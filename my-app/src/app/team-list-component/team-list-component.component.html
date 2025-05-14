@@ -1,0 +1,13 @@
+<div class="container my-4">
+  <h4 class="text-center mb-4">Lista de Times</h4>
+  <div class="row justify-content-center">
+    <div class="col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let team of teams">
+      <div class="card text-center shadow-sm h-100">
+        <img [src]="team.logoUrl" class="card-img-top p-3" style="max-height: 120px; object-fit: contain;">
+        <div class="card-body">
+          <h5 class="card-title">{{ team.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

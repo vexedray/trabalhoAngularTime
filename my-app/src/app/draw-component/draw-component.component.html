@@ -1,0 +1,22 @@
+<div class="container my-4">
+  <div class="card p-4">
+    <h4 class="mb-3 text-center">Sorteio de Chaves</h4>
+    <div class="text-center mb-4">
+      <button class="btn btn-success" (click)="shuffleTeams()">Sortear Chaves</button>
+    </div>
+
+    <div *ngFor="let pair of pairs" class="mb-4">
+      <div class="d-flex align-items-center justify-content-around">
+        <div class="text-center">
+          <img [src]="pair.team1.logoUrl" width="60" height="60" class="mb-1 rounded">
+          <p class="mb-0">{{ pair.team1.name }}</p>
+        </div>
+        <strong class="fs-4">X</strong>
+        <div class="text-center">
+          <img [src]="pair.team2.logoUrl" width="60" height="60" class="mb-1 rounded">
+          <p class="mb-0">{{ pair.team2.name }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
